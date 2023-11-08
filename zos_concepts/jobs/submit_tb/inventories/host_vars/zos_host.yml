@@ -1,0 +1,10 @@
+---
+source_system:
+  hosts:
+    zos_host:
+      PYZ: "/usr/lpp/IBM/cyp/v3r10/pyz"
+      ZOAU: "/usr/lpp/IBM/zoau"
+      ansible_host: "192.168.10.47"
+      ansible_user: "tommy"
+      ansible_python_interpreter: "{{ PYZ }}/bin/python3"
+      environment: "{{ environment_vars }}"
