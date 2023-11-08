@@ -11,7 +11,7 @@
 - hosts: all
   collections:
     - ibm.ibm_zos_core
-  gather_facts: yes
+  gather_facts: no
 
   tasks:
     - name: Convert a local JCL file to IBM-037 and submit the job
