@@ -10,9 +10,6 @@
 ---
 - hosts: all
   gather_facts: false
-  vars:
-    tgt_tmp_dir: "/tmp"
-    job_name: "NADA"
   environment: "{{ environment_vars }}"
 
   tasks:
@@ -22,7 +19,3 @@
         location: DATA_SET
         wait: true
       register: response
-
-    - name: Get response
-      debug:
-        msg: "{{ response }}"
