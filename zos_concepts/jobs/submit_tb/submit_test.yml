@@ -14,16 +14,11 @@
   gather_facts: no
 
   tasks:
-    - name: Convert a local JCL file to IBM-037 and submit the job
+    - name: Submit JCL in a PDSE member
       zos_job_submit:
-        src: "{{playbook_dir}}/files/HELLO.jcl"
-        location: LOCAL
-        dest: "/tmp"
-        wait: false
-        encoding:
-          from: UTF-8
-          to: IBM-037
-      register: job_sub_result
+        src: TOMMY.JCL.CNTL(NADA)
+        location: DATA_SET
+      register: response
 
     - name: Setting facts `sub_job_id` and `sub_job_name`
       set_fact:
