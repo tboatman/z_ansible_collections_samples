@@ -42,3 +42,10 @@
     - name: Response
       debug:
         msg: "{{ result.ping }}"
+
+    - name: Submit JCL in a PDSE member
+      ibm.ibm_zos_core.zos_job_submit:
+        src: "TOMMY.JCL.CNTL(NADA)"
+        location: DATA_SET
+        wait: true
+      register: response
