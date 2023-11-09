@@ -7,7 +7,8 @@
 # further configuration.
 ################################################################################
 environment_vars:
-  _BPXK_AUTOCVT: "ON"
+# _BPXK_AUTOCVT: "ON"
+  _BPXK_AUTOCVT: "OFF"
   ZOAU_HOME: "{{ ZOAU }}"
   PYTHONPATH: "{{ ZOAU }}/lib"
   LIBPATH: "{{ ZOAU }}/lib:{{ PYZ }}/lib:/lib:/usr/lib:."
@@ -17,7 +18,7 @@ environment_vars:
   _TAG_REDIR_IN: "txt"
   _TAG_REDIR_OUT: "txt"
   LANG: "C"
-  PYTHONSTDINENCODING: "cp1047"
+# PYTHONSTDINENCODING: "cp1047"
 
 ################################################################################
 # Description of the properties used in this configuration:
