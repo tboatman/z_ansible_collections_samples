@@ -13,7 +13,7 @@
   environment: "{{ environment_vars }}"
 
   vars:
-    ansible_ssh_pipelining: no
+    ansible_ssh_pipelining: false
 
   tasks:
     - name: Submit JCL in a PDSE member
