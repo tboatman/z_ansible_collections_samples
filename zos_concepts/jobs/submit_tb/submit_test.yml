@@ -9,18 +9,18 @@
 
 ---
 - hosts: all
-  collections:
-    - ibm.ibm_zos_core
-  gather_facts: no
+  gather_facts: false
+
   environment: "{{ environment_vars }}"
 
   tasks:
     - name: Submit JCL in a PDSE member
-      zos_job_submit:
-        src: TOMMY.JCL.CNTL(NADA)
+      ibm.ibm_zos_core.zos_job_submit:
+        src: "TOMMY.JCL.CNTL(NADA)"
         location: DATA_SET
+        wait: true
       register: response
- 
-    - name: get response
+
+    - name: Get response
       debug:
         msg: "{{ response }}"
