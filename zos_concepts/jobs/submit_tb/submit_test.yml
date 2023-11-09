@@ -10,7 +10,9 @@
 ---
 - hosts: all
   gather_facts: false
-
+  vars:
+    tgt_tmp_dir: "/tmp"
+    job_name: "NADA"
   environment: "{{ environment_vars }}"
 
   tasks:
@@ -23,4 +25,4 @@
 
     - name: Get response
       debug:
-        msg: "{{ response }}"
+        msg: {{ response }}
