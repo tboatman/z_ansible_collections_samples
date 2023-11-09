@@ -25,4 +25,4 @@
 
     - name: Get response
       debug:
-        msg: {{ response }}
+        msg: "{{ response }}"
