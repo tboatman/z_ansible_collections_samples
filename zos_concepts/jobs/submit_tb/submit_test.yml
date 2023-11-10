@@ -8,12 +8,9 @@
 ###############################################################################
 
 ---
-- hosts: all
+- hosts: zos_host
   gather_facts: false
-  environment: "{{ environment_vars }}"
 
-  vars:
-    ansible_ssh_pipelining: false
 
   tasks:
     - name: Submit JCL in a PDSE member
