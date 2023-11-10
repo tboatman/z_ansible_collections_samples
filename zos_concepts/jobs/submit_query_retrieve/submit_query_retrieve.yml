@@ -31,13 +31,10 @@
 ###############################################################################
 
 ---
-- hosts: zos_host
+- hosts: all
   collections:
     - ibm.ibm_zos_core
   gather_facts: false
-  vars:
-    tgt_tmp_dir: "/tmp"
-    job_name: "HELLO"
   environment: "{{ environment_vars }}"
 
   tasks:
